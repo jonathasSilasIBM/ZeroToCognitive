@@ -6930,7 +6930,7 @@ var QUERY_PARAMS_ALLOWED = ['model', 'watson-token']; // , 'X-Watson-Learning-Op
 
  *
  * @param {Object} options
- * @param {String} [options.model='en-US_BroadbandModel'] - voice model to use. Microphone streaming only supports broadband models.
+ * @param {String} [options.model='pt-BR_BroadbandModel'] - voice model to use. Microphone streaming only supports broadband models.
  * @param {String} [options.url='wss://stream.watsonplatform.net/speech-to-text/api'] base URL for service
  * @param {String} [options.content-type='audio/wav'] - content type of audio; can be automatically determined from file header in most cases. only wav, flac, and ogg/opus are supported
  * @param {Boolean} [options.interim_results=false] - Send back non-final previews of each "sentence" as it is being processed. Defaults to true when in objectMode.
@@ -6998,7 +6998,7 @@ RecognizeStream.prototype.initialize = function() {
     options['X-Watson-Learning-Opt-Out'] = options['X-WDC-PL-OPT-OUT'];
   }
 
-  var queryParams = util._extend({model: 'en-US_BroadbandModel'}, pick(options, QUERY_PARAMS_ALLOWED));
+  var queryParams = util._extend({model: 'pt-BR_BroadbandModel'}, pick(options, QUERY_PARAMS_ALLOWED));
   var queryString = qs.stringify(queryParams);
   var url = (options.url || 'wss://stream.watsonplatform.net/speech-to-text/api').replace(/^http/, 'ws') + '/v1/recognize?' + queryString;
 

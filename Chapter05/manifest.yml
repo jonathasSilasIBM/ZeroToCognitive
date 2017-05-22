@@ -9,4 +9,4 @@ applications:
   services:
     - Speech to Text-xx
     - Text to Speech-xx
-    - Natural Language Classifier-xx
+    - Natural Language Classifier-ll
