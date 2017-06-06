@@ -26,6 +26,8 @@ function initiateAlchemy()
     var _days = $("#days");
     var _count = $("#count");
     console.log("initiateAlchemy button clicked");
+    if (_co.val() == "") {$("#newsfeed").empty(); $("#newsfeed").append("<p>Please enter a company identifier</p>"); return;}
+    getAlchemyNews(_feed, _co.val(), _days.val(), _count.val(), displayAlchemyNews);
   });
 }
 
@@ -69,3 +71,4 @@ function displayAlchemyNews(_target, _data)
 //      _target.append(_bdy_html);
     })(each, _data);
     }
+}
